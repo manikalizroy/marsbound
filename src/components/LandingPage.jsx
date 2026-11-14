@@ -51,22 +51,22 @@ function LandingPage({ onStartMission }) {
         </div>
 
         {/* Mission Survival Thresholds */}
-{/* Commander Decisions */}
-<p className="briefing-text">
-  Each Sol you may choose ONE commander decision: Improve Radiation Shielding, Expand Greenhouse, Conserve Energy, Activate Water Recycling, or Activate Oxygen Generator. Each action has different resource costs and benefits.
-</p>
-{/* Daily Consumption */}
-<p className="briefing-text">
-  Every Sol the habitat automatically loses 5 Oxygen, 5 Water, and 5 Food. Energy has no daily consumption.
-</p>
-{/* Random Events */}
-<p className="briefing-text">
-  Random events may appear unpredictably: Severe Dust Storm (Energy loss), Water System Leak (Water loss), Solar Power Surge (Energy gain).
-</p>
-{/* Immediate Failure */}
-<p className="briefing-text">
-  If any resource reaches 0 the mission ends immediately.
-</p>
+        {/* Commander Decisions */}
+        <p className="briefing-text">
+          Each Sol you may choose ONE commander decision: Improve Radiation Shielding, Expand Greenhouse, Conserve Energy, Activate Water Recycling, or Activate Oxygen Generator. Each action has different resource costs and benefits.
+        </p>
+        {/* Daily Consumption */}
+        <p className="briefing-text">
+          Every Sol the habitat automatically loses 5 Oxygen, 5 Water, and 5 Food. Energy has no daily consumption.
+        </p>
+        {/* Random Events */}
+        <p className="briefing-text">
+          Random events may appear unpredictably: Severe Dust Storm (Energy loss), Water System Leak (Water loss), Solar Power Surge (Energy gain).
+        </p>
+        {/* Immediate Failure */}
+        <p className="briefing-text">
+          If any resource reaches 0 the mission ends immediately.
+        </p>
         <div className="briefing-thresholds-card">
           <h3 className="briefing-thresholds-title">🎯 Mission Survival Thresholds</h3>
           <p className="briefing-thresholds-desc">
@@ -106,14 +106,36 @@ function LandingPage({ onStartMission }) {
             *Illustrative gameplay thresholds, not official NASA requirements.
           </p>
         </div>
+
+        {/* Mars Mission Facts */}
+        <section className="mars-facts-card">
+          <h2>Mars Mission Facts</h2>
+          <div className="facts-grid">
+            <div className="fact-card">
+              <strong>Mean Surface Gravity</strong>
+              <p>3.73 m/s²</p>
+            </div>
+            <div className="fact-card">
+              <strong>Atmospheric Composition</strong>
+              <p>≈ 95.1 % CO₂</p>
+            </div>
+            <div className="fact-card">
+              <strong>Length of a Martian Day</strong>
+              <p>≈ 24.66 h</p>
+            </div>
+          </div>
+          <p className="facts-attribution">
+            Source: <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html" target="_blank" rel="noopener noreferrer">NASA Mars Fact Sheet</a>. These are real scientific facts; MARSBOUND’s resource values and survival mechanics are simplified educational simulations.
+          </p>
+        </section>
       </section>
 
       <div className="start-action-area">
-        <button className="btn-primary start-btn" onClick={onStartMission}>
-          <span className="btn-icon">🚀</span> Start Mission
-        </button>
-        <span className="start-hint">Prepare for habitat initialization – Sol 1 awaits</span>
-      </div>
+          <button className="btn-primary start-btn" onClick={onStartMission}>
+            <span className="btn-icon">🚀</span> Start Mission
+          </button>
+          <span className="start-hint">Prepare for habitat initialization – Sol 1 awaits</span>
+        </div>
     </div>
   );
 }
